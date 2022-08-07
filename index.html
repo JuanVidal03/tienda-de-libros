@@ -7,6 +7,8 @@
     <title>Tienda de Libros | Juan Vidal</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -17,8 +19,7 @@
 
             <div class="busqueda-contenedor">
 
-                <h1 class="busqueda-title">Aquí puedes buscar a tu autor o libro favorito:</h1>
-                <p>Escribe el nombre del autor o libro sin niguna tilde.</p>
+                <h1 class="busqueda-title">Aquí puedes buscar a tu autor favorito:</h1>
 
                 <div class="busqueda-contenedor-elementos-input">
                     
@@ -63,13 +64,68 @@
             </div>
 
             <div id="img-usuario">
-                
+                <!-- la imagen se cargará desde js -->
             </div>
 
         </div>
             
     </section>
     <!-- fin resultados de busqueda -->
+
+    <!-- información de los autores -->
+
+    <section id="info-autores">
+
+        <div class="autores-title-contenedor">    
+            <h2 class="autores-title">Autores</h2>
+        </div>
+
+        <div class="info-autores__contenedor">
+
+            <div class="autor GGM">
+
+                <img src="img/garcia-marquez.png" alt="Gabriel García Márquez" class="img-autor img-GGM">
+                <h5 class="titulo-autor">Gabriel García Márquez</h5>
+
+                <div id="pop-up-container">
+
+                    <div class="pop-up pop-up-close">
+                        <p class="cerrar">X</p>
+                        <div class="pop-up-container">
+                            <h5>Gabriel García Márquez</h5>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore alias recusandae mollitia sunt perferendis cum, nesciunt possimus voluptatum adipisci. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, earum?</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="autor JC">
+
+                <img src="img/julio-cortazar.png" alt="Julio Cortázar" class="img-autor img-JC">
+                <h5 class="titulo-autor">Julio Cortázar</h5>
+
+            </div>
+
+            <div class="autor EG">
+
+                <img src="img/eduardo-galeano.png" alt="Eduardo Galeano" class="img-autor img-EG">
+                <h5 class="titulo-autor">Eduardo Galeano</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- fin información de los autores -->
+
+
+
 
     <!-- footer -->
     <footer class="footer">
@@ -82,5 +138,6 @@
     <!-- js -->
     <script src="js/site.js"></script>
     <script src="js/infoAutores.js"></script>
+    <script src="js/popUpAutores.js"></script>
 </body>
 </html>
