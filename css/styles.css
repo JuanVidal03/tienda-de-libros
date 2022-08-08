@@ -24,6 +24,9 @@ h3{
 h5{
     font-size: 1.5rem;
 }
+h6{
+    font-size: 1.1rem;
+}
 /* fin Estilos generales*/
 
 /*estilos section de busqueda*/
@@ -187,7 +190,7 @@ h5{
     width: 100%;
     height: 100vh;
     padding: 5rem;
-    background-color: #f2f2f2;
+    background-color: #000;
 }
 
 .autores-title-contenedor{
@@ -200,6 +203,7 @@ h5{
     text-align: center;
     margin-bottom: 3rem;
     width: 300px;
+    color: #fff;
 }
 
 .info-autores__contenedor{
@@ -251,13 +255,120 @@ h5{
         rgba(0,0,0,0.9),
         rgba(0,0,0,0.5)
     );
-    z-index: 2;
+    z-index: 1;
 
 }
 
-#pop-up{
-
+.autor:hover::before{
+    z-index: 1;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.1)
+    );
 }
+
+
+
+/* estilos pop up */
+
+.pop-up{
+    width: 70%;
+    height: auto;
+    background-color: #fff;
+    padding: 3rem;
+    position: relative;
+    border-radius: 20px;
+    animation: pop-up 1s;
+}
+
+.pop-up-fecha-autor{
+    margin-bottom: 1rem;
+}
+
+.pop-up-texto-autor{
+    text-align: justify;
+}
+
+@keyframes pop-up{
+    from{
+        top: -330px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.pop-up-bibliografia{
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+}
+
+/* pop GGM */
+#pop-up-principal-container-GGM{
+    display: none;
+}
+
+#pop-up-container-GGM{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* fin pop up GGM */
+
+/* popup JC */
+#pop-up-principal-container-JC{
+    display: none;
+}
+
+#pop-up-container-JC{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* fin popup JC */
+
+/* pop up EG */
+#pop-up-principal-container-EG{
+    display: none;
+}
+
+#pop-up-container-EG{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* pop up EG */
+/* fin estilos pop up */
 
 /* fin info autores */
 
