@@ -21,9 +21,9 @@
  const infoResultadosTextoTrue = () =>{
 
     let textoInfoResultados = document.getElementById("texto-info-resultados");
-    let mostrarEnPantalla = document.createElement("p");
-    mostrarEnPantalla.innerHTML = `<h3>Tus resultados fueron los siguientes:</h3>`;
-    textoInfoResultados.replaceWith(mostrarEnPantalla);
+    let mostrarEnPantallaTrue = document.createElement("p");
+    mostrarEnPantallaTrue.innerHTML = `<h3>Tus resultados fueron los siguientes:</h3>`;
+    textoInfoResultados.replaceWith(mostrarEnPantallaTrue);
 
  }
 
@@ -31,9 +31,9 @@
  const infoResultadosTextoFalse = () =>{
 
     let textoInfoResultados = document.getElementById("texto-info-resultados");
-    let mostrarEnPantalla = document.createElement("p");
-    mostrarEnPantalla.innerHTML = `<h3>Lo lamentamos, aún no tenemos disponible tu busqueda 😥:</h3>`;
-    textoInfoResultados.replaceWith(mostrarEnPantalla);
+    let mostrarEnPantallaFalse = document.createElement("p");
+    mostrarEnPantallaFalse.innerHTML = `<h3>Lo lamentamos, aún no tenemos disponible tu busqueda 😥</h3>`;
+    textoInfoResultados.replaceWith(mostrarEnPantallaFalse);
 
  }
 
@@ -90,10 +90,11 @@ const eventoBusqueda = () =>{
     let entradaUsuario = document.getElementById("busqueda-entrada-usuario").value.toUpperCase();
     
     //en caso que exista el autor
-    if(infoAutor.some((existe) => existe.name.toUpperCase() === entradaUsuario)){
+    if(nombresAutoresUpperCase.includes(entradaUsuario)){
         
         //funcion cambio de texto
         infoResultadosTextoTrue();
+         alert("funciono");
         
         
         if(entradaUsuario === "gabriel garcia marquez".toUpperCase()){
@@ -133,7 +134,7 @@ const eventoBusqueda = () =>{
         //en caso de que no exista ni autor ni libro
     } else{
 
-        //función que cambia el contenido del texto
+        //función que cambia el contenido del texto en caso de que el autor o libro no exista
         infoResultadosTextoFalse();
 
         //función boton que recarga la página

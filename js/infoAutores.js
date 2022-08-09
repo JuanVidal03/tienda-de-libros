@@ -4,9 +4,17 @@ const nombresJC = ["Julio Cortázar", "Julio Cortazar", "Cortázar", "Julio", "C
 const nombresEG = ["Eduardo Galeano", "Eduardo", "Galeano"];
 
 
+//concatenación de los nombres
+const nombresAutores = nombresGGM.concat(nombresJC, nombresEG);
+//pasan de objeto a string
+const nombresAutoresObjectToString = JSON.stringify(nombresAutores);
+//ahora en string hago que su contenido sea en mayusculas
+const nombresAutoresUpperCase = nombresAutoresObjectToString.toUpperCase();
+console.log(nombresAutoresUpperCase);
+
+
 //array con la información de los autores
 const infoAutor = [
-
     {
         name: "Gabriel García Márquez",
         nacimiento: "Nació el 6 de marzo de 1927, Aracataca, Colombia",
