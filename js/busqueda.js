@@ -38,7 +38,7 @@
  }
 
 
-//mustra imagen segun autor
+//muestra imagen según autor
  const mostrarImg = (urlImagen) =>{
      
      let imagenAutor = document.createElement("img");
@@ -143,7 +143,6 @@ const eventoBusqueda = () =>{
     }
 
 }
-
 
 //creo una variable que contiene el elemento input submit
 let submitBtn = document.getElementById("busqueda-submit-btn");
