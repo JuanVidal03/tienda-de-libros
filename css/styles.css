@@ -371,6 +371,81 @@ h6{
 
 /* fin info autores */
 
+/* estilos  productos */
+
+#productos-destacados{
+    width: 100%;
+    height: 100vh;
+    padding: 5rem;
+}
+
+.productos-destacados-container{
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+    justify-content: space-evenly;
+}
+.productos-destacados-contenedor-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* estilos cards */
+
+.card {
+    width: 33%;
+    max-width: 350px;
+    height: 25rem;
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.card:hover{
+    border-radius: 0 30px;
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-contenedor-texto{
+    width: 100%;
+    padding: 2rem;
+}
+
+.add-to-cart{
+    width: 100%;
+    height: 13%;
+    font-size: 1.3rem;
+    transition: all .5s ease;
+    border: none;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.add-to-cart:hover{
+    transform: translateY(-30px);
+    height: 21%;
+}
+
+/* fin estilos cards productos */
+
+
+
+
 
 
 

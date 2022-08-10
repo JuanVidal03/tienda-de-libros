@@ -52,12 +52,12 @@
 
 
 //funcion que muestra el recorrido del autor
-const recorriendoAutores = (array, objeto) => {
+const recorriendoAutores = (array, autor) => {
 
-    for(const recorrer in array[objeto]){
+    for(const recorrer in array[autor]){
                     
         let contenedorInformacion = document.getElementById("informacion");
-        let recorridoObjeto = (array[objeto][recorrer]);
+        let recorridoObjeto = (array[autor][recorrer]);
         
         let mostrarEnPantalla = document.createElement("p");
         mostrarEnPantalla.classList.add("mostrar-en-pantalla");
@@ -94,15 +94,14 @@ const eventoBusqueda = () =>{
         
         //funcion cambio de texto
         infoResultadosTextoTrue();
-         alert("funciono");
         
-        
-        if(entradaUsuario === "gabriel garcia marquez".toUpperCase()){
+        if(nombresGGMUpperCase.includes(entradaUsuario)){
 
-            recorriendoAutores(infoAutor, [0]);
+
+            recorriendoAutores(infoAutor,[0]);
             mostrarImg("../img/garcia-marquez.png");
 
-        } else if(entradaUsuario === "julio cortazar".toUpperCase()){
+        } else if(nombresGGM.includes(entradaUsuario)){
             
             recorriendoAutores(infoAutor, [1]);
             mostrarImg("../img/julio-cortazar.png");

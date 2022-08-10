@@ -1,7 +1,11 @@
 //creo arrays que contienen algunas variaciones de los nombres de los autores, se identifica de manera más sencilla para el usuario
-const nombresGGM = ["Gabriel García Márquez", "Gabriel Garcia Marquez","Gabriel", "García", "Garcia", "Márquez", "Marquez", "gabo"];
+const nombresGGM = ["Gabriel García Márquez", "Gabriel Garcia Marquez","Gabriel", "García", "Garcia", "Márquez", "Marquez", "gabo", "garcía márquez", "garcia marquez"];
+const nombresGGMString = JSON.stringify(nombresGGM);
+const nombresGGMUpperCase = nombresGGMString.toUpperCase();
 const nombresJC = ["Julio Cortázar", "Julio Cortazar", "Cortázar", "Julio", "Cortazar" ];
 const nombresEG = ["Eduardo Galeano", "Eduardo", "Galeano"];
+
+console.log(nombresGGMUpperCase)
 
 
 //concatenación de los nombres
@@ -10,7 +14,6 @@ const nombresAutores = nombresGGM.concat(nombresJC, nombresEG);
 const nombresAutoresObjectToString = JSON.stringify(nombresAutores);
 //ahora en string hago que su contenido sea en mayusculas
 const nombresAutoresUpperCase = nombresAutoresObjectToString.toUpperCase();
-console.log(nombresAutoresUpperCase);
 
 
 //array con la información de los autores
