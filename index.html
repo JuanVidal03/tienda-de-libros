@@ -12,27 +12,38 @@
 </head>
 <body>
     
+    <header id="header" class="header">
+        <div class="header-titulo">
+            <h2>BuscarLibro</h2>
+        </div>
+        <div  class="carrito-btn">
+            <h2 id="carrito-btn">Carrito: <span id="contador-carrito">0</span></h2>
+        </div>
+    </header>
     <!-- sección de busqueda -->
     <section id="busqueda__container">
+        
 
-        <div class="busqueda-contenedor-elementos">
-
-            <div class="busqueda-contenedor">
-
-                <h1 class="busqueda-title">Aquí puedes buscar a tu autor o libro favorito:</h1>
-
-                <div class="busqueda-contenedor-elementos-input">
+            
+            <div class="busqueda-contenedor-elementos">
+                
+                <div class="busqueda-contenedor">
                     
-                    <input type="text" id="busqueda-entrada-usuario">
-                    <input type="submit" value="Buscar" id="busqueda-submit-btn">
-
+                    <h1 class="busqueda-title">Aquí puedes buscar a tu autor o libro favorito:</h1>
+                    
+                    <div class="busqueda-contenedor-elementos-input">
+                        
+                        <input type="text" id="busqueda-entrada-usuario">
+                        <input type="submit" value="Buscar" id="busqueda-submit-btn">
+                        
+                    </div>
+                    
+                    
                 </div>
-
-
+                
             </div>
-
         </div>
-
+            
     </section>
     <!-- fin sección busqueda -->
 
@@ -178,38 +189,7 @@
 
             <div class="productos-destacados-container" id="productos-destacados-container">
 
-                <div class="card" id="card-producto">
-                    <figure class="card-contenedor-img">
-                        <img class="card-img" src="img/garcia-marquez.png" alt="cien años de soledad">
-                    </figure>
-                    <div class="card-contenedor-texto">
-                        <h3 id="card-title" class="card-title">Cien Años de Soledad</h3>
-                        <span id="precio" class="precio">$60.000 COP</span>
-                    </div>
-                    <button id="add-to-cart" class="add-to-cart">Añadir al Carrito</button>
-                </div>
-
-                <div class="card" id="card-producto">
-                    <figure class="card-contenedor-img">
-                        <img class="card-img" src="img/eduardo-galeano.png" alt="espajos">
-                    </figure>
-                    <div class="card-contenedor-texto">
-                        <h3 id="card-title" class="card-title">Espejos</h3>
-                        <span id="precio" class="precio">$50.000 COP</span>
-                    </div>
-                    <button id="add-to-cart" class="add-to-cart">Añadir al Carrito</button>
-                </div>
-
-                <div class="card" id="card-producto">
-                    <figure class="card-contenedor-img">
-                        <img class="card-img" src="img/julio-cortazar.png" alt="rayuela">
-                    </figure>
-                    <div class="card-contenedor-texto">
-                        <h3 id="card-title" class="card-title">Rayuela</h3>
-                        <span id="precio" class="precio">$109.000 COP</span>
-                    </div>
-                    <button id="add-to-cart" class="add-to-cart">Añadir al Carrito</button>
-                </div>
+                <!-- Aquí van los productos -->
 
             </div>
             
@@ -218,33 +198,40 @@
     <!-- fin productos destacados -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- footer -->
     <footer class="footer">
         <p>Diseño por <a href="https://www.linkedin.com/in/juan-manuel-vidal-1ab885216/" target="_blank">Juan Vidal</a></p>
     </footer>
     <!-- fin footer -->
 
-
+    <!-- popup carrito -->
+    <div id="modal-principal-container">
+        <div id="modal-contenedor">
+            <div id="modal">
+                <div class="modal-carrito">
+                    <h3>Carrito</h3>
+                <button id="carritoCerrar" class="carrito-cerrar">x</button>
+                <div id="carrito-contenedor">
+                    <!-- <div class="productoEnCarrito">
+                        <p>Buzo 1</p>
+                        <p>Precio: $1200</p>
+                        <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                    </div> -->
+                </div>
+                <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+            </div>
+        </div>
+    </div>
+    
+    
 
     <!-- js -->
     <script src="js/busqueda.js"></script>
     <script src="js/infoAutores.js"></script>
     <script src="js/popUpAutores.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/popUpCarrito.js"></script>
 </body>
 </html>

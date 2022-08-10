@@ -44,6 +44,8 @@ const infoAutor = [
 
 ];
 
+
+
 //Array con información de los libros
 
 const librosAutores = [
