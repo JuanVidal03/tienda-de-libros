@@ -96,18 +96,17 @@ const eventoBusqueda = () =>{
         infoResultadosTextoTrue();
         
         if(nombresGGMUpperCase.includes(entradaUsuario)){
-
-
+            //función para recorrer autores
             recorriendoAutores(infoAutor,[0]);
             mostrarImg("../img/garcia-marquez.png");
 
-        } else if(nombresGGM.includes(entradaUsuario)){
-            
+        } else if(nombresJCUpperCase.includes(entradaUsuario)){
+            //función para recorrer autores
             recorriendoAutores(infoAutor, [1]);
             mostrarImg("../img/julio-cortazar.png");
             
-        } else if(entradaUsuario === "eduardo galeano".toUpperCase()){
-            
+        } else if(nombresEGUpperCase.includes(entradaUsuario)){
+            //función para recorrer autores
             recorriendoAutores(infoAutor, [2]);
             mostrarImg("../img/eduardo-galeano.png");
             

@@ -2,8 +2,14 @@
 const nombresGGM = ["Gabriel García Márquez", "Gabriel Garcia Marquez","Gabriel", "García", "Garcia", "Márquez", "Marquez", "gabo", "garcía márquez", "garcia marquez"];
 const nombresGGMString = JSON.stringify(nombresGGM);
 const nombresGGMUpperCase = nombresGGMString.toUpperCase();
+
 const nombresJC = ["Julio Cortázar", "Julio Cortazar", "Cortázar", "Julio", "Cortazar" ];
+const nombresJCString = JSON.stringify(nombresJC);
+const nombresJCUpperCase = nombresJCString.toUpperCase();
+
 const nombresEG = ["Eduardo Galeano", "Eduardo", "Galeano"];
+const nombresEGString = JSON.stringify(nombresEG);
+const nombresEGUpperCase = nombresEGString.toUpperCase();
 
 console.log(nombresGGMUpperCase)
 
