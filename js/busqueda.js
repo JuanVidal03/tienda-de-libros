@@ -17,7 +17,7 @@
  }
 
 
- //funcion cambio de texto en caso de que el autor o libro existan
+ //funcion cambio de texto en caso de que el autor existan
  const infoResultadosTextoTrue = () =>{
 
     let textoInfoResultados = document.getElementById("texto-info-resultados");
@@ -41,13 +41,12 @@
 //muestra imagen según autor
  const mostrarImg = (urlImagen) =>{
      
-     let imagenAutor = document.createElement("img");
-     let contenedorImg = document.getElementById("img-usuario");
-     
- 
-         imagenAutor.classList.add("img");
-         imagenAutor.src = urlImagen;
-         contenedorImg.appendChild(imagenAutor);
+    let imagenAutor = document.createElement("img");
+    let contenedorImg = document.getElementById("img-usuario");
+    
+    imagenAutor.classList.add("img");
+    imagenAutor.src = urlImagen;
+    contenedorImg.appendChild(imagenAutor);
  }
 
 

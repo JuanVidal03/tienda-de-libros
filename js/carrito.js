@@ -1,5 +1,5 @@
 
-//obtengo mediante ell dom
+//obtengo el contenedor mediante el dom
 const contenedorProductos = document.getElementById("productos-destacados-container");
 
 
@@ -30,13 +30,31 @@ productos.forEach((producto) =>{
     btnAgregar.addEventListener('click', () =>{
         agregarCarrrito(producto.id);
     });
+    
+    //evento para cambiar el testo de añadir al carrito cuando la persona haga click en el botón
+    btnAgregar.addEventListener("click", () =>{
+
+        btnAgregar.innerText = "¡Añadido!";
+        btnAgregar.style.backgroundColor = "green";
+
+         setTimeout(() => {
+            btnAgregar.innerText = "Añadir al carrito";
+            btnAgregar.style.backgroundColor = "red";
+        }, 1000);
+
+    });
+
+
 });
+
+
+
 
 
 //hago un array de carrito vacio debido a que aún no tengo nigún dato
 let carrito = [];
 
-//para cargarlo en el localk storage
+//para cargarlo en el local storage
 document.addEventListener("DOMContentLoaded", () =>{
 
     if(localStorage.getItem("carrito")){
@@ -82,7 +100,7 @@ const actualizarCarrito = () => {
 const eliminarDelCarrito = (id) =>{
     //encontrar el producto
     const item = carrito.find((producto) => producto.id === id);
-    const indice = carrito.indexOf(item);
+    const indice = carrito.includes(item);
     //para recortar el producto del array
     carrito.splice(indice, 1);
 
