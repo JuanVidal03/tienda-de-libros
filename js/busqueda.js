@@ -1,3 +1,19 @@
+
+//cambiar el background en la sección de busqueda utilizando libreria vegas
+$(".busqueda-contenedor-slider").vegas({
+    delay: 5000,
+    transition: "fade2", 
+    slides: [
+        { src: "/img/baner-principal.jpg" },
+        { src: "/img/julio-cortazar.png" },
+        { src: "/img/garcia-marquez.png" },
+        { src: "/img/eduardo-galeano.png" }
+    ],
+    overlay: "/vendor/vegas/overlays/07.png",
+    animation: "random",
+});
+
+
 //funcion del botón que recarga la página
  const recargarPagina = () =>{
 
@@ -81,12 +97,14 @@ const recorriendoLibros = (libros) =>{
     };
 }
 
+//declaro la entradad del usuario
+let entradaUsuario;
 
 //evento que hace la busqueda despues de dar clik en "buscar"
 const eventoBusqueda = () =>{
     
-    //entrada del usuario atraves del input
-    let entradaUsuario = document.getElementById("busqueda-entrada-usuario").value.toUpperCase();
+    // incializo entrada del usuario atraves del input
+    entradaUsuario = document.getElementById("busqueda-entrada-usuario").value.toUpperCase();
     
     //en caso que exista el autor
     if(nombresAutoresUpperCase.includes(entradaUsuario)){
@@ -136,7 +154,6 @@ const eventoBusqueda = () =>{
 
         //función boton que recarga la página
         recargarPagina();
-
 
     }
 

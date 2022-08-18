@@ -31,16 +31,19 @@ productos.forEach((producto) =>{
         agregarCarrrito(producto.id);
     });
     
-    //evento para cambiar el testo de añadir al carrito cuando la persona haga click en el botón
+    //evento para que aparezza un mensaje satisfactorio de añadición al carrito
     btnAgregar.addEventListener("click", () =>{
 
-        btnAgregar.innerText = "¡Añadido!";
-        btnAgregar.style.backgroundColor = "green";
-
-         setTimeout(() => {
-            btnAgregar.innerText = "Añadir al carrito";
-            btnAgregar.style.backgroundColor = "red";
-        }, 1000);
+        //elemento de la libreria toastify
+        Toastify({
+            text: "¡Producto Añadido!",
+            duration: 3000,
+            style: {
+                top: "0px",
+                right: "50px",
+                background: "green",
+            },
+          }).showToast();
 
     });
 

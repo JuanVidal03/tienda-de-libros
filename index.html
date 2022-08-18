@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Libros | Juan Vidal</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Toastify Libreria -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Vegas libreria -->
+    <link rel="stylesheet" href="vendor/vegas/vegas.min.css">
+    <!-- michalsnik -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     
@@ -21,29 +27,31 @@
         </div>
     </header>
     <!-- sección de busqueda -->
-    <section id="busqueda__container">
-        
+    <section class="busqueda-contenedor-slider">
 
+        <section id="busqueda__container">
             
             <div class="busqueda-contenedor-elementos">
                 
-                <div class="busqueda-contenedor">
-                    
-                    <h1 class="busqueda-title">Aquí puedes buscar a tu autor favorito:</h1>
-                    
-                    <div class="busqueda-contenedor-elementos-input">
+                    <div class="busqueda-contenedor">
                         
-                        <input type="text" id="busqueda-entrada-usuario">
-                        <input type="submit" value="Buscar" id="busqueda-submit-btn">
+                        <h1 class="busqueda-title">Aquí puedes buscar a tu autor favorito:</h1>
+                        
+                        <div class="busqueda-contenedor-elementos-input">
+                            
+                            <input type="text" id="busqueda-entrada-usuario">
+                            <input type="submit" value="Buscar" id="busqueda-submit-btn">
+                            
+                        </div>
+                        
                         
                     </div>
                     
-                    
                 </div>
-                
             </div>
-        </div>
-            
+                
+        </section>
+
     </section>
     <!-- fin sección busqueda -->
 
@@ -91,7 +99,7 @@
             <h2 class="autores-title">Autores Reconocidos</h2>
         </div>
 
-        <div class="info-autores__contenedor">
+        <div class="info-autores__contenedor" data-aos="zoom-in" data-aos-duration="1000">
             <!-- info GGM -->
             <div class="autor" id="GGM">
 
@@ -187,7 +195,7 @@
         <div id="productos-destacados-principal-container" class="productos-destacados-principal-container">
 
 
-            <div class="productos-destacados-container" id="productos-destacados-container">
+            <div class="productos-destacados-container" id="productos-destacados-container" data-aos="zoom-in" data-aos-duration="1000">
 
                 <!-- Aquí van los productos -->
 
@@ -196,13 +204,6 @@
         </div>
     </section>
     <!-- fin productos destacados -->
-
-
-    <!-- footer -->
-    <footer class="footer">
-        <p>Diseño por <a href="https://www.linkedin.com/in/juan-manuel-vidal-1ab885216/" target="_blank">Juan Vidal</a></p>
-    </footer>
-    <!-- fin footer -->
 
     <!-- popup carrito -->
     <div id="modal-principal-container">
@@ -219,7 +220,28 @@
             </div>
         </div>
     </div>
+    <!-- fin pop up carrito -->
 
+    <!-- footer -->
+    <footer class="footer">
+        <p>Diseño por <a href="https://www.linkedin.com/in/juan-manuel-vidal-1ab885216/" target="_blank">Juan Vidal</a></p>
+    </footer>
+    <!-- fin footer -->
+
+
+
+    
+    <!-- toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- jquery v3.6.0 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <!-- vegas v2.5.4 -->
+    <script src="vendor/vegas/vegas.min.js"></script>
+    <!-- michalsnik v2.3.1 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- js -->
     <script src="js/busqueda.js"></script>
