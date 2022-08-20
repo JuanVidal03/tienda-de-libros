@@ -1,0 +1,21 @@
+
+[
+    {
+        "precio": 600,
+        "nombre": "Cien Años de Soledad",
+        "id": 1,
+       "img": "../img/garcia-marquez.png"
+    },
+    {
+        "precio": 500,
+        "nombre": "Espejos",
+        "id": 2,
+        "img": "../img/eduardo-galeano.png"
+    },
+    {
+        "precio": 1000,
+        "nombre": "Rayuela",
+        "id": 3,
+        "img": "./img/julio-cortazar.png"
+    }
+]
